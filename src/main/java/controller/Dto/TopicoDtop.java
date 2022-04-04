@@ -1,11 +1,13 @@
-package controller;
+package controller.Dto;
 
 import domain.Topico;
+import lombok.Getter;
 
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Getter
 public class TopicoDtop {
 
     private Long id ;
@@ -24,19 +26,5 @@ public class TopicoDtop {
     return topicos.stream().map(TopicoDtop :: new ).collect(Collectors.toList());//convert
     }
 
-    public Long getId() {
-        return id;
-    }
 
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public String getMensagem() {
-        return mensagem;
-    }
-
-    public LocalDateTime getDataCriacao() {
-        return dataCriacao;
-    }
 }
